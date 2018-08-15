@@ -17,7 +17,8 @@ It may have a dependency on a more recent version of R (or one of the packages t
 Consider updating your R installation to the current version. On Windows, this is most easily done via the installr package.
 library(installr)
 updateR()
-(Of course, you may need to install.packages("installr") first.)
+
+Of course, you may need to install.packages("installr") first.
 Equivalently for Bioconductor packages, you may need to update your Bioconductor installation.
 source("http://bioconductor.org/biocLite.R")
 biocLite("BiocUpgrade")
