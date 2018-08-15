@@ -13,13 +13,10 @@ Perhaps you don't really want a package. It is common to be confused about the d
 
 To see available datasets, type: data()
 5. R or Bioconductor is out of date
-
 It may have a dependency on a more recent version of R (or one of the packages that it imports/depends upon does). 
 Consider updating your R installation to the current version. On Windows, this is most easily done via the installr package.
--------------------
 library(installr)
 updateR()
--------------------
 (Of course, you may need to install.packages("installr") first.)
 Equivalently for Bioconductor packages, you may need to update your Bioconductor installation.
 source("http://bioconductor.org/biocLite.R")
