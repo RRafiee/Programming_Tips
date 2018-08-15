@@ -3,5 +3,6 @@
 ## How should I deal with “package 'xxx' is not available (for R version x.y.z)” warning?
 1. You can't spell
 The first thing to test is have you spelled the name of the package correctly? Package names are case sensitive in R.
-2. You didn't look in the right repository
+2. You didn't look in the right repository. Next, you should check to see if the package is available. Type
 setRepositories()
+3. The package is not in the repositories you selected
