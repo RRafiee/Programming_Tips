@@ -27,3 +27,12 @@ Equivalently for Bioconductor packages, you may need to update your Bioconductor
 source("http://bioconductor.org/biocLite.R")
 biocLite("BiocUpgrade")
 
+6. The package is out of date
+
+7. There is no Windows/OS X/Linux binary
+
+8. The package is on github/Bitbucket/Gitorious
+
+9. There is no source version of the package
+
+10. The package is in a non-standard repository
