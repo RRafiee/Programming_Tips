@@ -38,7 +38,7 @@ biocLite("BiocUpgrade")
 10. The package is in a non-standard repository
 
 
-## Error in mcfork() or R multicore mcfork(): Unable to fork: Cannot allocate memory
+# Error in mcfork() or R multicore mcfork(): Unable to fork: Cannot allocate memory
 # Debugging tips:
 
 The issue might be exactly what the error message suggests: there isn't enough memory to fork and create parallel processes.
