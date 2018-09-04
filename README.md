@@ -38,7 +38,7 @@ biocLite("BiocUpgrade")
 10. The package is in a non-standard repository
 
 
-# R multicore mcfork(): Unable to fork: Cannot allocate memory
+## Error in mcfork() or R multicore mcfork(): Unable to fork: Cannot allocate memory
 # Debugging tips:
 
 The issue might be exactly what the error message suggests: there isn't enough memory to fork and create parallel processes.
@@ -46,10 +46,12 @@ The issue might be exactly what the error message suggests: there isn't enough m
 R essentially needs to create a copy of everything that's in memory for each individual process (to my knowledge it doesn't utilize shared memory). If you are already using 51% of your RAM with a single process, then you don't have enough memory to create a second process since that would required 102% of your RAM in total.
 
 Try:
+1) Using fewer cores - If you were trying to use 4 cores, it's possible you have enough RAM to support 3 parallel threads, but not 4. registerDoMC(2), for example, will set the number of parallel threads to 2 (if you are using the doMC parallel backend).
 
-    Using fewer cores - If you were trying to use 4 cores, it's possible you have enough RAM to support 3 parallel threads, but not 4. registerDoMC(2), for example, will set the number of parallel threads to 2 (if you are using the doMC parallel backend).
-    Using less memory - without seeing the rest of your code, it's hard to suggest ways to accomplish this. One thing that might help is figuring out which R objects are taking up all the memory (Determining memory usage of objects?) and then removing any objects from memory that you don't need (rm(my_big_object))
-    Adding more RAM - if all else fails, throw hardware at it so you have more capacity.
-    Sticking to single threading - multithreaded processing in R is a tradeoff of CPU and memory. It sounds like in this case you may not have enough memory to support the CPU power you have, so the best course of action might be to just stick to a single core.
+2) Using less memory - without seeing the rest of your code, it's hard to suggest ways to accomplish this. One thing that might help is figuring out which R objects are taking up all the memory (Determining memory usage of objects?) and then removing any objects from memory that you don't need (rm(my_big_object))
+
+3) Adding more RAM - if all else fails, throw hardware at it so you have more capacity.
+    
+4) Sticking to single threading - multithreaded processing in R is a tradeoff of CPU and memory. It sounds like in this case you may not have enough memory to support the CPU power you have, so the best course of action might be to just stick to a single core.
 
 
