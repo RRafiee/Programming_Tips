@@ -48,7 +48,7 @@ R essentially needs to create a copy of everything that's in memory for each ind
 Try:
 1) Using fewer cores - If you were trying to use 4 cores, it's possible you have enough RAM to support 3 parallel threads, but not 4. registerDoMC(2), for example, will set the number of parallel threads to 2 (if you are using the doMC parallel backend).
 
-2) Using less memory - without seeing the rest of your code, it's hard to suggest ways to accomplish this. One thing that might help is figuring out which R objects are taking up all the memory (Determining memory usage of objects?) and then removing any objects from memory that you don't need (rm(my_big_object))
+2) Using less memory - without seeing the rest of your code, it's hard to suggest ways to accomplish this. One thing that might help is figuring out which R objects are taking up all the memory (Determining memory usage of objects using object.size() or memory.profile()) and then removing any objects from memory that you don't need (rm(my_big_object))
 
 3) Adding more RAM - if all else fails, throw hardware at it so you have more capacity.
     
