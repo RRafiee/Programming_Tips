@@ -54,4 +54,8 @@ Try:
     
 4) Sticking to single threading - multithreaded processing in R is a tradeoff of CPU and memory. It sounds like in this case you may not have enough memory to support the CPU power you have, so the best course of action might be to just stick to a single core.
 
+# R Installation Problem on Windows 10 64 bit
+## Rstudio can't launch on windows 10. JUst a blank screen!
+Check the version of R you have installed on Windows. Try not to use the follwoing version: RStudio-1.2.1335 (129,985KB)
+I have used this version which is properly working: RStudio-1.3.322 (163,236KB)
 
