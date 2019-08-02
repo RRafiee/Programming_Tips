@@ -56,7 +56,7 @@ Try:
 
 # R Installation Problem on Windows 10 64 bit
 ## Rstudio can't launch on windows 10. JUst a blank screen!
-Check the version of R you have installed on Windows 10. Try not to use the follwoing version: RStudio-1.2.1335 (129,985KB)
+Check the version of R you have installed on Windows. Try not to use the follwoing version: RStudio-1.2.1335 (129,985KB)
 
 I have used this version which is properly working: RStudio-1.3.322 (163,236KB)
 
